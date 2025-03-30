@@ -1,0 +1,194 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 25px; 
+    
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    font-size: 28px; 
+    font-weight: bold;
+    
+}
+
+header.dark-mode {
+    background-color:#121212;
+    color: #f4f4f4;
+}
+
+/* Container dos países */
+.allCountries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Cartão de país */
+.country {
+    background: rgba(236, 235, 235, 0.913);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;  
+}
+
+.country.dark-mode {
+    background: #1e1e1e;
+    color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.country:hover {
+    transform: scale(1.05);
+}
+
+/* Imagens das bandeiras */
+.country img {
+    width: 180px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    
+}
+
+.country span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0073e6;
+}
+
+/* Página de detalhes */
+.country-details {
+    background: rgb(255, 251, 251);
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.country-details p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.country-details a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #0073e6;
+    font-size: 18px; 
+    padding: 12px 18px; 
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+/* Botão de alternância de modo escuro */
+button#toggleDarkMode {
+    position: fixed; /* Fixa o botão na posição */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da borda direita */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    font-size: 24px; /* Tamanho do ícone */
+    cursor: pointer; /* Mostra o cursor de clique */
+    color: #0073e6; /* Cor do ícone */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transições suaves */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+button#toggleDarkMode:hover {
+    transform: scale(1.2); /* Aumenta o botão ao passar o mouse */
+    color: #005bb5; /* Muda a cor ao passar o mouse */
+}
+
+body.dark-mode button#toggleDarkMode {
+    color: #f4f4f4;
+}
+
+.dark-button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dark-button img {
+    filter: brightness(0.8);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .allCountries {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .country {
+        width: 90%;
+    }
+
+    .country-details {
+        width: 90%;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #f4f4f4; 
+    color: rgb(12, 9, 9); 
+    text-align: center; 
+    padding: 15px 0; 
+    margin-top: 20px;
+    font-size: 16px; 
+}
+
+footer a {
+    color: hwb(183 13% 33%); 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+footer a:hover {
+    color: #0a0808; 
+    text-decoration: underline;
+}
+
+/* Modo escuro para o rodapé */
+body.dark-mode footer {
+    background-color: #121212; 
+    color: #f4f4f4; 
+}
+
+body.dark-mode footer a {
+    color: hwb(183 13% 33%); 
+}
+
+body.dark-mode footer a:hover {
+    color: #d6d6d6;
+}
+
+

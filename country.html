@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do País</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="country-details">
+        <h1 id="country-name"></h1>
+        <img id="flag" src="" alt="Bandeira">
+        <p><strong>Capital:</strong> <span id="capital"></span></p>
+        <p><strong>Língua:</strong> <span id="language"></span></p>
+        <p><strong>Moeda:</strong> <span id="currency"></span></p>
+        <p><strong>Continente:</strong> <span id="continent"></span></p>
+        <p><strong>População:</strong> <span id="population"></span></p>
+        <p><strong>Área:</strong> <span id="area"></span> km²</p>
+        <p><a id="maps" href="" target="_blank">Ver no Google Maps</a></p>
+    </div>
+    <script src="country.js"></script>
+    <script>const toggleDarkModeButton = document.getElementById("toggleDarkMode");
+
+        toggleDarkModeButton.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+          document.querySelector("header").classList.toggle("dark-mode");
+          document.querySelectorAll(".country").forEach((country) => {
+            country.classList.toggle("dark-mode");
+          });
+          const countryDetails = document.querySelector(".country-details");
+          if (countryDetails) {
+            countryDetails.classList.toggle("dark-mode");
+          }
+        });
+        </script>
+</body>
+</html>
