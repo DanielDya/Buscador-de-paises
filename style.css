@@ -7,6 +7,8 @@ body {
     padding: 0;
     text-align: center;
     font-size: 25px; 
+}
+*{
     text-decoration: none;
 }
 body.dark-mode {
@@ -86,6 +88,7 @@ header.dark-mode {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .country-details p {
     font-size: 20px;
     margin: 10px 0;
@@ -96,31 +99,32 @@ header.dark-mode {
     display: inline-block;
     text-decoration: none;
     color: white;
-    background-color: #0073e6;
+    background-color: #14c21d;
     font-size: 18px; 
     padding: 12px 18px; 
     border-radius: 5px;
     margin-top: 10px;
     transition: background 0.3s;
+    
 }
 
 /* Botão de alternância de modo escuro */
 button#toggleDarkMode {
-    position: fixed; /* Fixa o botão na posição */
-    top: 10px; /* Distância do topo */
-    right: 10px; /* Distância da borda direita */
-    background-color: transparent; /* Fundo transparente */
-    border: none; /* Remove a borda */
-    font-size: 24px; /* Tamanho do ícone */
-    cursor: pointer; /* Mostra o cursor de clique */
-    color: #0073e6; /* Cor do ícone */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transições suaves */
-    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    position: fixed; 
+    top: 10px;
+    right: 10px;
+    background-color: transparent; 
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer;
+    color: #0073e6; 
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 1000; 
 }
 
 button#toggleDarkMode:hover {
-    transform: scale(1.2); /* Aumenta o botão ao passar o mouse */
-    color: #005bb5; /* Muda a cor ao passar o mouse */
+    transform: scale(1.2); 
+    color: #005bb5; 
 }
 
 body.dark-mode button#toggleDarkMode {
@@ -157,7 +161,7 @@ body.dark-mode button#toggleDarkMode {
 
 /* Rodapé */
 footer {
-    background-color: #f4f4f4; 
+    background-color: #e3ddddc7; 
     color: rgb(12, 9, 9); 
     text-align: center; 
     padding: 15px 0; 
