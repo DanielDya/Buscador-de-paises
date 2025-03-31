@@ -1,4 +1,5 @@
 let allCountries = [];
+let dark = false;
 
 async function searchCountries(value) {
   //https://restcountries.com/v3.1/region/europe
@@ -14,7 +15,12 @@ function renderCountries() {
 
   for (let country of allCountries) {
     let card = document.createElement("div");
-    card.classList.add("country");
+    // card.classList.add("country");
+    if(dark){
+      card.classList.add("country");
+      card.classList.add("dark-mode");
+    }else
+     card.classList.add("country");
 
     card.innerHTML = `
       <a href="country.html?code=${country.cca3}">
@@ -29,6 +35,8 @@ function renderCountries() {
 
 function filterCountries(input) {
   console.log(input.value);
+  // if(dark)
+  //   mudar();
   searchCountries(input.value);
 }
 
@@ -44,7 +52,7 @@ function renderFilteredCountries(filteredCountries) {
 
   for (let country of filteredCountries) {
     let card = document.createElement("div");
-    card.classList.add("country");
+    
 
     card.innerHTML = `
       <a href="country.html?code=${country.cca3}">
@@ -61,14 +69,19 @@ searchCountries("all");
 
 const toggleDarkModeButton = document.getElementById("toggleDarkMode");
 
-toggleDarkModeButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  document.querySelector("header").classList.toggle("dark-mode");
-  document.querySelectorAll(".country").forEach((country) => {
-    country.classList.toggle("dark-mode");
-  });
-  const countryDetails = document.querySelector(".country-details");
-  if (countryDetails) {
-    countryDetails.classList.toggle("dark-mode");
-  }
-});
+toggleDarkModeButton.addEventListener("click", mudar);
+
+function mudar() {
+  
+  // dark = !dark;
+    document.body.classList.toggle("dark-mode");
+    document.querySelector("header").classList.toggle("dark-mode");
+    document.querySelectorAll(".country").forEach((country) => {
+      dark = true;
+      country.classList.toggle("dark-mode");
+    });
+    const countryDetails = document.querySelector(".country-details");
+    if (countryDetails) {
+      countryDetails.classList.toggle("dark-mode");
+    }
+}

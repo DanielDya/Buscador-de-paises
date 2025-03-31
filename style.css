@@ -50,7 +50,9 @@ header.dark-mode {
     padding: 15px;
     transition: transform 0.3s ease-in-out;  
 }
-
+.country-name{
+    color: #fcf6f6;
+}
 .country.dark-mode {
     background: #1e1e1e;
     color: #f4f4f4;
@@ -81,10 +83,10 @@ header.dark-mode {
 /* Página de detalhes */
 .country-details {
     background: rgb(255, 251, 251);
-    max-width: 500px;
-    margin: 50px auto;
+    background-image: url("mapamundo.jpg");
+    background-position: left , right;
+    background-repeat:unset;
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
