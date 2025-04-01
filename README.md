@@ -70,7 +70,7 @@ fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
 ```
 
 ## Melhorias Futuras 🔮
-- Adicionar modo escuro(Dark Mode) para a pagina de detalhes
+- Adicionar modo escuro(Dark Mode) para o site 
 - Melhorar a experiência do usuário com animações e transições.
 - Adicionar suporte para múltiplos idiomas.
 - Permitir a comparação entre países.
