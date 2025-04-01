@@ -9,29 +9,6 @@ Este projeto é um buscador de países que permite pesquisar e filtrar países p
 - [x] Exibir o total de países encontrados.
 - [x] Mostrar informações básicas, como nome e bandeira do país.
 - [x] Página de detalhes funcional com informações completas sobre o país selecionado.
-- [x] Modo escuro (Dark Mode) para melhorar a experiência do usuário.
-
-## Modo Escuro 🌙
-
-O projeto possui um **Dark Mode** que pode ser ativado clicando no botão de alternância no canto superior direito da página. Este modo altera o esquema de cores para tons mais escuros, proporcionando uma experiência mais confortável em ambientes com pouca luz.
-
-### Como funciona:
-- O botão de alternância adiciona ou remove a classe `dark-mode` no elemento `<body>` e em outros elementos relevantes.
-- Os estilos do modo escuro são definidos no arquivo `style.css`.
-
-### Exemplo de Código:
-```javascript
-const toggleDarkModeButton = document.getElementById("toggleDarkMode");
-
-toggleDarkModeButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  document.querySelector("header").classList.toggle("dark-mode");
-  const countryDetails = document.querySelector(".country-details");
-  if (countryDetails) {
-    countryDetails.classList.toggle("dark-mode");
-  }
-});
-```
 
 ## Design do Projeto 🎨
 
